@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Un ejemplo con elementos de HTML</title>
+		<meta name="author" content="Yo mismo">
+		<meta charset="UTF-8">
+		<!--<link href="styles/estiloprueba.css" rel="stylesheet">-->
+		<style>
+			#inicio {text-decoration:underline}
+			.cabecera {text-decoration:overline; color:yellow}
+		</style>
+		<script>
+			function saludo(mens) {
+				alert(mens);
+			}
+		</script>
+		<script>
+			function draw() {
+				var canvas = document.getElementById("a");
+				var context = canvas.getContext("2d");
+				context.fillStyle = "red";
+				context.fillRect(0, 0, 100, 100);
+				for (var x = 0.5; x < 100; x += 10) {
+					context.moveTo(x, 0);
+					context.lineTo(x, 100);
+				}
+				for (var y = 0.5; y < 100; y += 10) {
+					context.moveTo(0, y);
+					context.lineTo(100, y);
+				}
+				context.strokeStyle = "#eee";
+				context.stroke();
+				context.fillText("Texto", 45, 120);
+				var ima = new Image();
+				ima.src = "mapa.gif";
+				ima.onload = function() {
+					context.drawImage(ima, 0, 150);
+				};
+			}
+		</script>
+	</head>
+	<body lang="es"> <!-- onload="alert('Bienvenido')" -->
+		<h1 id="inicio" onclick="saludo('Gracias por su visita')">Primer nivel</h1>
+		<h2 class="cabecera">Segundo nivel</h2>
+		<h3 class="cabecera">Tercer nivel</h3>
+		<h4><span title="El 4">Cuarto</span> nivel</h4>
+
+		<div id="importante" title="2 últimos niveles">
+			<h5>Quinto nivel</h5>
+			<h6>Sexto y último nivel</h6>
+		</div>
+		
+		<p>Un párrafo</p>
+		<p><bdo dir="rtl" style="color: fuchsia"> Otro párrafo más largo, más largo, más largo,más largo, más largo, más largo,...</bdo></p>
+		
+		<address title="mi direccion">Página escrita por mí (con salto de línea explícito)<br>ETSII</address>
+		<p>Nuevo párrafo&nbsp;&nbsp;&nbsp;&nbsp;adicional</p>
+		
+		<hr>
+		
+		<h2>Texto relacionado con programas</h2>	
+		<pre>
+			int main(){
+				int i, tot;
+				int j=5;
+					for (i=0; i&lt;1000; i++)
+					tot=j*i;
+				return 0;
+			}
+			
+			<code>Código</code>.
+			<samp>Muestra de salida de un programa</samp>.
+			<kbd>Texto tecleado</kbd>.
+			<var>Una variable</var>.
+		</pre>
+		
+		<hr>
+
+		<h2>Formateando texto</h2>
+		<i>Cursiva</i>.
+		<em>Énfasis</em>.
+		<b>Negrilla</b>.
+		<strong>Más énfasis</strong>.
+		<p><mark>No lo olvides</mark>: En vez de <del>2<sup>10</sup> menos x<sub>2</sub></del>, sería <ins>2<sup>10</sup> más x<sub>2</sub></ins></p>
+		<small>Deberías leer la letra pequeña del contrato</small>	
+		<dfn title="Hyper Text Markup Language">HTML</dfn>.
+		<abbr title="etcétera">Una abreviatura: (etc.)</abbr>.
+
+		<p></p>
+		
+		<blockquote>
+			<p>Una cita larga larga larga larga larga larga larga larga
+			larga larga larga larga larga larga larga larga larga larga larga larga
+			larga larga larga larga larga larga larga larga larga larga larga larga
+			larga larga larga larga larga larga larga larga larga larga larga larga
+			larga larga larga larga larga larga larga larga larga larga larga larga
+			larga larga larga larga larga larga larga larga larga larga larga larga
+			larga larga larga larga.</p>
+		</blockquote>
+		
+		<p>En este párrafo hay: <q>una cita corta</q></p>
+		<p>Esa obra se llama <cite>El final</cite>.</p>
+		<p>Llegaré a las <time>20:35</time>.</p>
+		
+		<details>
+			<summary>Escuela Técnica Superior de Ingenieros Informáticos</summary>
+			<p>Antes conocida como Facultad de Informática....</p>
+		</details>
+		
+		<hr>
+		
+		<h2>Una figura</h2>
+		<figure>
+			<img src="images/dalisimpson.jpg" alt="persistencia de la memoria" width="400" height="293">
+			<figcaption>La persistencia de la memoria, versión de Matt Groening.</figcaption>
+		</figure> 
+		
+		<hr>
+		
+		<h2 id="listas">Listas</h2>
+		<ul>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+		</ul>
+		
+		<ol>
+			<li>Elemento 1</li>
+			<li>Elemento 2</li>
+		</ol>
+		
+		<dl>
+			<dt>Término 1</dt>
+			<dd>Definición 1</dd>
+			<dt>Término 2</dt>
+			<dd>Definición 2</dd>
+		</dl>
+		
+		<hr>
+		
+		<h2>Tablas</h2>
+		<table style="border: 1px solid black;">
+			<caption>Leyenda de la tabla</caption>
+			<!--<colgroup>
+				<col style="background-color:red">
+				<col span="3" style="background-color:yellow">
+			</colgroup>-->
+			<thead>
+				<tr><th></th><th>Cabecera col 1</th><th>Cabecera col 2</th><th>Cabecera col 3</th></tr>
+			</thead>
+			<tfoot>
+				<tr><th></th><th>Pie col 1</th><th>Pie col 2</th><th>Pie col 3</th></tr>
+			</tfoot>
+			<tbody>
+				<tr><th>Fila 1</th><td>Dato</td><td>Dato</td><td>Dato</td></tr>
+				<tr><th>Fila 2</th><td>Dato</td><td colspan="2">Dato</td></tr>
+				<tr><th>Fila 3</th><td rowspan="2">Dato</td><td>Dato</td><td>Dato</td></tr>
+				<tr><th>Fila 4</th><td>Dato</td><td>Dato</td></tr>
+			</tbody>
+		</table>
+			
+		<hr>
+		
+		<h2>Enlaces</h2>
+		<p>Enlace al <a href="#inicio" title="Ir al inicio">inicio</a>.</p>
+		<p>Enlace a <a href="bla.html">otra página</a>.</p>
+		<p>Enlace a <a href="bla.html#mitad">una sección de otra página</a>.</p>
+		<p>Para acceder a la persistencia de la memoria <a href="images/dalisimpson.jpg">aquí</a> o <a href="images/dalisimpson.jpg"><img src="images/flecha.gif" alt="flecha"></a> .</p>
+		
+		<hr>
+		
+		<h2>Imágenes</h2>
+		<p>Figura con tamaño natural  <img src="images/dalisimpson.jpg" alt="persistencia de la memoria" width="400" height="295"></p>
+		<p>Uso de iframe: <iframe src="bla.html" height="400" width="400"></iframe></p>
+		<p>Flash con embed: <embed src="images/helloworld.swf"></p>
+		<p>Uso de object para la figura: <object data="images/dalisimpson.jpg" type="image/jpeg" height="293" width="400"></object></p>
+		<p>Uso de object como iframe: <object data="bla.html" height="400" width="400"></object></p>
+		<p>Flash con object: <object data="images/helloworld.swf"></object></p>
+		
+		<hr>
+		
+		<h2>Mapas</h2>
+		<p>Selección mediante mapa
+			<map name="mapa_prueba">
+				<area shape="circle" coords="60,40,20" href="#listas" alt="Listas">
+				<area shape="rect" coords="120,20,160,60" href="#inicio" alt="Inicio">
+				<area shape="poly" coords="200,20,240,40,200,60" href="#forms" alt="Formularios">
+				<area shape="default" nohref="" alt="Sin acción asociada">
+			</map>
+			<img src="images/mapa.gif" usemap="#mapa_prueba" alt="Mapa">
+		</p>
+
+		<p>Uso de mapa en servidor:
+			<a href="bla.html"><img src="images/mapa.gif" ismap="" alt="Mapa"></a>
+		</p>
+		
+		<hr>
+		
+		<h2 id="forms">Formularios</h2>
+		<form action="http://www.datsi.fi.upm.es/~fperez/test.cgi" autocomplete="off">
+			<fieldset>
+				<legend>Elemento input</legend>
+				<input type="hidden" name="escondido" value="valor">
+				<br>
+				<label for="texto1">Input de texto con placeholder y de relleno obligatorio:</label>
+				<input type="text" id="texto1" name="nombre1" placeholder="texto inicial" required>
+				<br>
+				<label for="texto3">Input de texto con validación de patrón:</label>
+				<input type="text" id="texto3" name="nombre3" pattern="[A-Z]{3}">
+				<br>
+				<label for="texto2">Input de texto con focus inicial:</label>
+				<input type="text" id="texto2" name="nombre2" value="texto inicial" autofocus="">
+				<br>
+				<label for="contra">Input de password:</label>
+				<input type="password" id="contra" name="Contra">
+				<br>
+				<label for="op1">Primera opción de radio:</label>
+				<input type="radio" id="op1" name="opcion_radio" value="Opción 1">
+				<label for="op2">Segunda opción de radio:</label>
+				<input type="radio" id="op2" name="opcion_radio" value="Opción 2" checked="">
+				<br>
+				<label for="opA">Primera opción de checkbox:</label>
+				<input type="checkbox" id="opA" name="opcion_checkbox" value="Opción A">
+				<label for="opB">Segunda opción de checkbox:</label>
+				<input type="checkbox" id="opB" name="opcion_checkbox" value="Opción B">
+				<br>
+				<label for="fich">Input de fichero:</label>
+				<input type="file" id="fich" name="fichero">
+				<br>
+				<label for="lista">Input de lista:</label>
+				<input id="lista" list="browsers">
+				<datalist id="browsers">
+					<option value="Internet Explorer"></option>
+					<option value="Firefox"></option>
+					<option value="Chrome"></option>
+					<option value="Opera"></option>
+					<option value="Safari"></option>
+				</datalist> 
+				<br>
+				<label for="telef">Input de teléfono:</label>
+				<input type="tel" id="telef" name="telefono">
+				<br>
+				<label for="correo">Input de dir. de correo:</label>
+				<input type="email" id="correo" name="Correo">
+				<br>
+				<label for="url">Input de URL:</label>
+				<input type="url" id="url" name="URL">
+				<br>
+				<label for="numero">Input de número:</label>
+				<input type="number" id="numero" name="numero" min="1" max="5">
+				<br>
+				<label for="rango">Input de rango:</label>
+				<input type="range" id="rango" name="Rango" min="1" max="5">
+				<br>
+				<label for="color">Input de color:</label>
+				<input type="color" id="color" name="Color">
+				<br>
+				<label for="fecha">Input de fecha:</label>
+				<input type="date" id="fecha" name="Fecha">
+				<br>
+				<label for="mes">Input de mes:</label>
+				<input type="month" id="mes" name="Mes">
+				<br>
+				<label for="hora">Input de hora:</label>
+				<input type="time" id="hora" name="Hora">
+				<br>
+				<label for="imag">Envía mediante Input de imagen:</label>
+				<input type="image" name="flecha" id="imag" src="images/flecha.gif">
+				<br>
+				<input type="submit" value="Enviar"> <input type="reset">
+				<input type="button" value="Botón">
+			</fieldset>
+			<fieldset>
+				<legend>Elemento textarea</legend>
+				<label for="parrafada">Área de texto: </label>
+				<textarea name="escrito" id="parrafada" rows="20" cols="50">Contenido inicial.</textarea>
+			</fieldset>
+			<fieldset>
+				<legend>Elemento button</legend>
+				<button type="submit">Enviar <img src="images/flecha.gif" alt="flecha"></button>
+				<button type="reset">Restablecer <img src="images/flecha.gif" alt="flecha"></button>
+				<button type="button">Botón <img src="images/flecha.gif" alt="flecha"></button>
+			</fieldset>
+			<fieldset>
+				<legend>Elemento select</legend>
+				<label for="sel_simple">Selección simple:</label>
+				<select id="sel_simple" name="select simple">
+					<optgroup label="Primera sección">
+						<option selected="" value="OpI">Opción I</option>
+						<option value="OpII">Opción II</option>
+						<option value="OpIII">Opción III</option>
+						<option value="OpIV">Opción IV</option>
+					</optgroup>
+					<optgroup label="Segunda sección">
+						<option value="OpV">Opción V</option>
+						<option value="OpVI">Opción VI</option>
+					</optgroup>
+				</select>
+				<label for="sel_multiple">Selección múltiple:</label>
+				<select id="sel_multiple" size="3" multiple="" name="select multiple">
+					<optgroup label="Primera sección">
+						<option selected="" value="OpI">Opción I</option>
+						<option selected="" value="OpII">Opción II</option>
+						<option value="OpIII">Opción III</option>
+						<option value="OpIV">Opción IV</option>
+					</optgroup>
+					<optgroup label="Segunda sección">
+						<option value="OpV">Opción V</option>
+						<option value="OpVI">Opción VI</option>
+					</optgroup>
+				</select>
+			</fieldset>
+		</form>
+		
+		<hr>
+		
+		<h2 onclick="draw()">Prueba de canvas</h2>
+		<canvas id="a" width="300" height="300"></canvas>
+
+		<hr>
+		
+		<h2>Prueba vídeo (de w3schools)</h2>
+		<video width="320" height="240" controls="">
+		  <source src="videos/movie.mp4" type="video/mp4">
+		</video>
+		
+		<object width="420" height="315"
+			data="https://www.youtube.com/v/8CPhEi7aqLY">
+		</object>
+
+</body></html>
