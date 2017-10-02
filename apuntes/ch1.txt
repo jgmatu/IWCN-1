@@ -1,0 +1,36 @@
+HTML, JSS, CSS -> Tecnologías cliente.
+
+ASP.net Java PHP  -> Tecnologias servidor.
+
+Servidor web, BBDD.
+
+Sin base de datos, XML y REST servicios de proovedores no es necesario una base de datos obtengo la información através de servicos externos.
+
+Cloud -> Mantenimiento, conocimiento eliminado. Escalabilidad y tolerancia a fallos.
+
+Arquitecturas de la aplicaciones web
+------------------------------------
+
+Página web estática.
+
+Página web interactiva.
+
+Aplicación web con cliente estático.
+
+Aplicación web interactiva: Background y foreground  dinámico.
+
+AJAX: Cliente peticiones asíncronas sin tener que pasar por el servidor.
+
+Aplicación web SPA: Single Page Application crear una página web por componentes. Evolución de AJAX. Ejecutas todo
+en una misma página... Google Maps.
+
+REST -> Implementación de una API REST y utilización de una API REST.
+
+Sistemas gestor de contenido : Preparado para mostrar contenido... Blog...
+
+
+DESING PATTERN -> Mirar...
+
+IoS DESIGN PATTERN -> Inversión de control con inyección de dependencias.
+
+Modelo vista controlador -> Patrón de diseño.

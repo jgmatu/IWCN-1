@@ -4,39 +4,44 @@
 		<title>Un ejemplo con elementos de HTML</title>
 		<meta name="author" content="Yo mismo">
 		<meta charset="UTF-8">
-		<!--<link href="styles/estiloprueba.css" rel="stylesheet">-->
+
+		<link href="styles/estiloprueba.css" rel="stylesheet">
 		<style>
 			#inicio {text-decoration:underline}
 			.cabecera {text-decoration:overline; color:yellow}
 		</style>
+
 		<script>
-			function saludo(mens) {
-				alert(mens);
-			}
+		function saludo(mens) {
+			alert(mens);
+		}
 		</script>
 		<script>
-			function draw() {
-				var canvas = document.getElementById("a");
-				var context = canvas.getContext("2d");
-				context.fillStyle = "red";
-				context.fillRect(0, 0, 100, 100);
-				for (var x = 0.5; x < 100; x += 10) {
-					context.moveTo(x, 0);
-					context.lineTo(x, 100);
-				}
-				for (var y = 0.5; y < 100; y += 10) {
-					context.moveTo(0, y);
-					context.lineTo(100, y);
-				}
-				context.strokeStyle = "#eee";
-				context.stroke();
-				context.fillText("Texto", 45, 120);
-				var ima = new Image();
-				ima.src = "mapa.gif";
-				ima.onload = function() {
-					context.drawImage(ima, 0, 150);
-				};
+		function draw() {
+			var canvas = document.getElementById("a");
+			var context = canvas.getContext("2d");
+			context.fillStyle = "red";
+			context.fillRect(0, 0, 100, 100);
+
+			for (var x = 0.5; x < 100; x += 10) {
+				context.moveTo(x, 0);
+				context.lineTo(x, 100);
 			}
+
+			for (var y = 0.5; y < 100; y += 10) {
+				context.moveTo(0, y);
+				context.lineTo(100, y);
+			}
+			context.strokeStyle = "#eee";
+			context.stroke();
+			context.fillText("Texto", 45, 120);
+
+			var ima = new Image();
+			ima.src = "mapa.gif";
+			ima.onload = function() {
+				context.drawImage(ima, 0, 150);
+			};
+		}
 		</script>
 	</head>
 	<body lang="es"> <!-- onload="alert('Bienvenido')" -->
@@ -49,16 +54,16 @@
 			<h5>Quinto nivel</h5>
 			<h6>Sexto y último nivel</h6>
 		</div>
-		
+
 		<p>Un párrafo</p>
 		<p><bdo dir="rtl" style="color: fuchsia"> Otro párrafo más largo, más largo, más largo,más largo, más largo, más largo,...</bdo></p>
-		
+
 		<address title="mi direccion">Página escrita por mí (con salto de línea explícito)<br>ETSII</address>
 		<p>Nuevo párrafo&nbsp;&nbsp;&nbsp;&nbsp;adicional</p>
-		
+
 		<hr>
-		
-		<h2>Texto relacionado con programas</h2>	
+
+		<h2>Texto relacionado con programas</h2>
 		<pre>
 			int main(){
 				int i, tot;
@@ -67,13 +72,13 @@
 					tot=j*i;
 				return 0;
 			}
-			
+
 			<code>Código</code>.
 			<samp>Muestra de salida de un programa</samp>.
 			<kbd>Texto tecleado</kbd>.
 			<var>Una variable</var>.
 		</pre>
-		
+
 		<hr>
 
 		<h2>Formateando texto</h2>
@@ -82,12 +87,12 @@
 		<b>Negrilla</b>.
 		<strong>Más énfasis</strong>.
 		<p><mark>No lo olvides</mark>: En vez de <del>2<sup>10</sup> menos x<sub>2</sub></del>, sería <ins>2<sup>10</sup> más x<sub>2</sub></ins></p>
-		<small>Deberías leer la letra pequeña del contrato</small>	
+		<small>Deberías leer la letra pequeña del contrato</small>
 		<dfn title="Hyper Text Markup Language">HTML</dfn>.
 		<abbr title="etcétera">Una abreviatura: (etc.)</abbr>.
 
 		<p></p>
-		
+
 		<blockquote>
 			<p>Una cita larga larga larga larga larga larga larga larga
 			larga larga larga larga larga larga larga larga larga larga larga larga
@@ -97,46 +102,46 @@
 			larga larga larga larga larga larga larga larga larga larga larga larga
 			larga larga larga larga.</p>
 		</blockquote>
-		
+
 		<p>En este párrafo hay: <q>una cita corta</q></p>
 		<p>Esa obra se llama <cite>El final</cite>.</p>
 		<p>Llegaré a las <time>20:35</time>.</p>
-		
+
 		<details>
 			<summary>Escuela Técnica Superior de Ingenieros Informáticos</summary>
 			<p>Antes conocida como Facultad de Informática....</p>
 		</details>
-		
+
 		<hr>
-		
+
 		<h2>Una figura</h2>
 		<figure>
 			<img src="images/dalisimpson.jpg" alt="persistencia de la memoria" width="400" height="293">
 			<figcaption>La persistencia de la memoria, versión de Matt Groening.</figcaption>
-		</figure> 
-		
+		</figure>
+
 		<hr>
-		
+
 		<h2 id="listas">Listas</h2>
 		<ul>
 			<li>Elemento 1</li>
 			<li>Elemento 2</li>
 		</ul>
-		
+
 		<ol>
 			<li>Elemento 1</li>
 			<li>Elemento 2</li>
 		</ol>
-		
+
 		<dl>
 			<dt>Término 1</dt>
 			<dd>Definición 1</dd>
 			<dt>Término 2</dt>
 			<dd>Definición 2</dd>
 		</dl>
-		
+
 		<hr>
-		
+
 		<h2>Tablas</h2>
 		<table style="border: 1px solid black;">
 			<caption>Leyenda de la tabla</caption>
@@ -157,17 +162,17 @@
 				<tr><th>Fila 4</th><td>Dato</td><td>Dato</td></tr>
 			</tbody>
 		</table>
-			
+
 		<hr>
-		
+
 		<h2>Enlaces</h2>
 		<p>Enlace al <a href="#inicio" title="Ir al inicio">inicio</a>.</p>
 		<p>Enlace a <a href="bla.html">otra página</a>.</p>
 		<p>Enlace a <a href="bla.html#mitad">una sección de otra página</a>.</p>
 		<p>Para acceder a la persistencia de la memoria <a href="images/dalisimpson.jpg">aquí</a> o <a href="images/dalisimpson.jpg"><img src="images/flecha.gif" alt="flecha"></a> .</p>
-		
+
 		<hr>
-		
+
 		<h2>Imágenes</h2>
 		<p>Figura con tamaño natural  <img src="images/dalisimpson.jpg" alt="persistencia de la memoria" width="400" height="295"></p>
 		<p>Uso de iframe: <iframe src="bla.html" height="400" width="400"></iframe></p>
@@ -175,9 +180,9 @@
 		<p>Uso de object para la figura: <object data="images/dalisimpson.jpg" type="image/jpeg" height="293" width="400"></object></p>
 		<p>Uso de object como iframe: <object data="bla.html" height="400" width="400"></object></p>
 		<p>Flash con object: <object data="images/helloworld.swf"></object></p>
-		
+
 		<hr>
-		
+
 		<h2>Mapas</h2>
 		<p>Selección mediante mapa
 			<map name="mapa_prueba">
@@ -192,9 +197,9 @@
 		<p>Uso de mapa en servidor:
 			<a href="bla.html"><img src="images/mapa.gif" ismap="" alt="Mapa"></a>
 		</p>
-		
+
 		<hr>
-		
+
 		<h2 id="forms">Formularios</h2>
 		<form action="http://www.datsi.fi.upm.es/~fperez/test.cgi" autocomplete="off">
 			<fieldset>
@@ -234,7 +239,7 @@
 					<option value="Chrome"></option>
 					<option value="Opera"></option>
 					<option value="Safari"></option>
-				</datalist> 
+				</datalist>
 				<br>
 				<label for="telef">Input de teléfono:</label>
 				<input type="tel" id="telef" name="telefono">
@@ -310,19 +315,19 @@
 				</select>
 			</fieldset>
 		</form>
-		
+
 		<hr>
-		
+
 		<h2 onclick="draw()">Prueba de canvas</h2>
 		<canvas id="a" width="300" height="300"></canvas>
 
 		<hr>
-		
+
 		<h2>Prueba vídeo (de w3schools)</h2>
 		<video width="320" height="240" controls="">
 		  <source src="videos/movie.mp4" type="video/mp4">
 		</video>
-		
+
 		<object width="420" height="315"
 			data="https://www.youtube.com/v/8CPhEi7aqLY">
 		</object>

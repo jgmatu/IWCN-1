@@ -1,0 +1,78 @@
+Tecnologías web.
+
+HTML -> Características semánticas. Siempre el estilo en el CSS.
+
+SGML -> Lenguaje primitivo XML y HTML define el lenguaje de etiquetas.
+
+HTML 2.0 -> Revoluciona el HTML y define el núcleo básico head, body etc...
+
+W3C -> Toma importancia el HTML. Accesibilidad.
+
+
+HTML 4.0 -> Aparecen las hojas de estilo. 4.01 no llega a lo que se pide.
+
+Lenguaje derivado del HTML los lenguajes basados en SGML son difíciles de procesar.
+
+Se renuncia a XHTML 2.0 por la complejidad del lenguaje.
+
+HTML5 -> Standar actualmente en HTML, compatible con HTML 4.0 y XHTML 1.0
+
+
+Standar -> Hasta que no los usa más gente... Si el tag funciona perfecto y la gente
+la va utilizando se convierte en un estandar.
+
+HTML5
+
+  Mejor definición de la estrucutra de documentos...
+
+  Soporte de funcionalidad de scripts...
+
+  Funcionalidad para plug-ins
+
+  Soporte de gráficos directo para gráficos (canvas).
+
+  Soporte directo para videos y audios.
+
+  Soporte aplicaciones fuera de linea offline... (propiedad de HTML5).
+
+  Marcos -> iframe queda fuera de HTML5.
+
+  Atributos HTML asociados a las etiquetas.
+
+  <p> -> Elemento de bloque.
+
+  Embebido -> de otra página web...
+
+  Mapa te localizas en un punto del mapa. Coordenada. Aplicación responsive... Porcentajes... con mapas.
+
+  Formularios... : Interacción con el humano... Action -> GET POST... envío de información al servidor o ejecución de
+  un JS.
+
+  input
+
+  select  -> lista...
+
+  textareas -> ...
+
+  video -> puedes elegir otros formatos.
+
+  atributo manifest en HTML -> para trabajo offline... caché.
+
+  pseudo clases.
+
+    :hover -> Te colocas encima...
+
+    :visited -> Google ya visitado.
+
+  Herencia de los estilos en cascada que se van sobrescribiendo.
+
+  !important -> Si está ese se queda esa y no se aplica la herencia de estilos.
+
+  inherit -> Por defecto se hereda el estilo.
+
+  Referencias de propiedades. Forma de posicionamiento de los objetos dentro de las páginas HTML.
+
+  @media -> media query's para realizar tema responsive adaptativas. Dependiendo de la pantalla en la que se está
+  ejecutando hace unos u otros estilos...
+
+  Github... -> Ejercicio Word...
